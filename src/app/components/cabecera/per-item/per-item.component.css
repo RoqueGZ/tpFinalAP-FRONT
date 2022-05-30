@@ -1,0 +1,63 @@
+.contenedorPer {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.conImagenes {
+    width: 100%;
+    height: 375px;
+}
+
+.imgPortada {
+    width: 100%;
+    height: 350px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgPerfil {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 3px solid black;
+    margin: -160px 0px 0px 0px;
+}
+
+.conInfo {
+    position: absolute;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(24, 55, 122);
+    border-radius: 5px;
+    text-align: center;
+    margin: 340px 0px 0px 40px;
+}
+
+.conInfo p {
+    margin: 3px 7px 3px 7px;
+    color: white;
+}
+
+#edit {
+    margin: 0px 0px 0px 10px;
+}
+
+#edit:hover {
+    color: rgb(156, 156, 156);
+}
+
+#delete:hover {
+    color: brown;
+}
+
+fa-icon:hover {
+    font-size: 20px;
+}
+
+fa-icon {
+    cursor: pointer;
+}

@@ -1,0 +1,59 @@
+<header>
+    <nav class="navbar">
+        <div class="navImg">
+            <img src="../../../assets/APLogooo.png" class="imgUno" alt="Logo de Argentina Programa">
+            <img src="../../../assets/LogosInti.png" class="imgDos" alt="Logo del Inti">
+        </div>
+        <div class="navMenu" *ngIf="estaLogeado">
+            <button class="botonMenu" (click)="onMenu()"><b>menu</b></button>
+        </div>
+    </nav>
+    <div class="modalPrincipal" *ngIf="okMenu" (click)="cerrarMenu()">
+        <div class="cajaPosicion">
+            <div class="cajaMenu">
+                <ul>
+                    <li><a href="#acercade">Acerca de..</a></li>
+                    <li><a href="#experiencia">Experiencia</a></li>
+                    <li><a href="#educacion">Educacion</a></li>
+                    <li><a href="#habilidad">Habilidades</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+
+                    <div class="cerrarSesion">
+                        <button class="botonLogOut" (click)="cerrarSesion()">LogOut<fa-icon [icon]="faLogin"></fa-icon></button>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="cajaLogin1" *ngIf="!estaLogeado">
+    <div class="cajaLogin2">
+        <img src="../../../assets/portada.jpg" alt="">
+    </div>
+    <div class="cajaLogin3">
+        <div class="conTexto">
+            <p>Iniciar sesion como usuario para ver el contenido</p>
+        </div>
+        <button class="botonLogin" (click)="abrirModal()">Login<fa-icon [icon]="faLogin"></fa-icon></button>
+        <div class="" *ngIf="abrirFormularioLogin == true">
+            <div class="modalll" (click)="cerrarModal()"></div>
+            <div class="modal-body">
+                <div class="modal-content">
+                    <div class="textoLogin" *ngIf="!abrirModalReg">
+                        <h4>Utiliza las siguientes credenciales:</h4>
+                        <p>Nombre de Usuario: <b>user</b></p>
+                        <p>Contraseña: <b>user</b></p>
+                        <app-login></app-login>
+                        <p>Ó crean una cuenta propia: </p>
+                        <button (click)="abrirModalRegistro()">Crear cuenta</button>
+                    </div>
+                    <div *ngIf="abrirModalReg">
+                        <button (click)="cerrarModalRegistro()"> <--Regresar</button>
+                        <app-registro></app-registro>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
